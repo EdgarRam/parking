@@ -1,0 +1,42 @@
+doctype html
+html(lang='es' ng-app="webappParkingPublic")
+	head
+		title Estacionamiento gft
+
+		link( href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.css")
+		link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,300italic' rel='stylesheet' type='text/css')
+		//- link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/0.10.2/angular-chart.min.css')
+		link(rel='stylesheet', href='/public/styles/main.css')
+
+		style.
+			svg {
+			  width: 100%;
+			  height: 100%;
+			  visibility: hidden;
+			  transform: scale(2.2);
+			}
+			.loading{
+				width: 400px;
+				height: 400px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+	body
+		include public/views/login.pug
+		//- div( ng-include = "'/public/views/login.html'")
+		//- i.material-icons.initApp account_circle
+
+		//- script( src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.3/TweenMax.min.js')
+		//- script( src = 'http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js')
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-animate.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-aria.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js")
+		//- script(src='/bower_components/Chart.js/Chart.js')
+		//- script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/0.10.2/angular-chart.min.js')
+
+
+		script(type='text/javascript', src='/public/scripts/webapp/webapp.js')
+		script(type='text/javascript', src='/public/scripts/controllers/sign-ctrl.js')

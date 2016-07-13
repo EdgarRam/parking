@@ -1,0 +1,12 @@
+
+md-dialog(aria-label='List dialog')
+	md-dialog-content
+		md-toolbar.md-hue-2
+			div.md-toolbar-tools
+				h2
+					span Cambio de auto predeterminado
+		div.content-dialog
+			p Desea eliminar el auto {{deleteCar.brand}} / {{deleteCar.model}} / {{deleteCar.plate}} ?
+	md-dialog-actions
+		md-button.md-raised.md-primary(ng-click='accept()') Si
+		md-button.md-raised.md-warn(ng-click='cancel()') No

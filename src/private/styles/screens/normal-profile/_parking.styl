@@ -1,0 +1,112 @@
+@keyframes passo1 {
+    0%{
+        top 170px
+        left -600px
+    }
+    35%{
+        top 170px
+        left 330px
+        transform rotate(0)
+    }
+    55%{
+        top 100px
+        left 290px
+        transform-origin top left
+        transform rotate(0.1turn)
+    }
+    75%{
+        transform-origin top left
+        transform rotate(0.1turn)
+        left 110px
+        top 0px
+    }
+    90%{
+        left 0
+        transform-origin top left
+        transform rotate(0deg)
+    }
+}
+
+
+
+.parking
+
+
+
+    h1
+        display inline-block
+
+
+
+    label
+        border-radius 5px;
+        background-color blue-gft
+        color white
+        padding 5px 15px
+        margin-left 20px
+
+
+
+        &:after
+            content "Iniciar"
+
+
+    input
+        display none
+
+
+
+    input#carTest:checked + label
+
+
+        &:after
+            content "Parar"
+
+
+    .station
+        -moz-box-shadow 0px -20px 0px #c4baba
+        -webkit-box-shadow 0px -20px 0px #c4baba
+        background-color #dcd6d6
+        border-top 2px solid white
+        box-shadow 0px -20px 0px #c4baba
+        height 400px
+        margin-top 35px
+        overflow hidden
+        padding 20px 25px
+        position relative
+
+
+
+        #test
+            margin 0 30px
+            margin-top 12px
+            z-index 6
+
+
+        &.active
+
+
+            #test
+                animation passo1 10s ease-in-out infinite
+
+
+        &:before
+        &:after
+            border 2px dashed white
+            content ""
+            display block
+            height 100%
+            position absolute
+            top 0
+            width 0px
+            z-index 1
+
+
+
+        &:before
+            left 325px
+
+
+
+        &:after
+            right 330px

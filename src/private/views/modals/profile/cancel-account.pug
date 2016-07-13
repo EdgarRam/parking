@@ -1,0 +1,12 @@
+
+md-dialog(aria-label='List dialog')
+	md-dialog-content
+		md-toolbar.md-hue-2
+			div.md-toolbar-tools
+				h2
+					span Cancelar cuenta
+		div.content-dialog
+			p ¿ Deseas cancelar tu cuenta ?
+	md-dialog-actions
+		md-button.md-raised.md-primary(ng-click='accept()') Si
+		md-button.md-raised.md-warn(ng-click='cancel()') No

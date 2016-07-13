@@ -1,0 +1,12 @@
+
+md-dialog(aria-label='List dialog')
+	md-dialog-content
+		md-toolbar.md-hue-2
+			div.md-toolbar-tools
+				h2
+					span Cambio de auto predeterminado
+		div.content-dialog
+			p Desea cambiar su auto predeterminado a {{carSelected.brand}} / {{carSelected.model}} / {{carSelected.plate}} ?
+	md-dialog-actions
+		md-button.md-raised.md-primary(ng-click='accept()') Si
+		md-button.md-raised.md-warn(ng-click='cancel()') No

@@ -1,0 +1,45 @@
+
+div.normal-profile-cars( ng-class="{ 'car-selected': carTimeline }")
+	ul.options
+		li.item-option
+			md-button.md-fab.md-primary.md-mini.md-button.md-ink-ripple( ng-click="addCar()" )
+				md-icon add
+				md-tooltip(md-direction="left")
+					span Agregar auto
+
+	div.container-cars-cards
+		div.car-card( ng-repeat=" car in cars" ng-click="showTimeline(car)" )
+			div.options
+				md-menu(md-position-mode="target-right target")
+					md-button.md-icon-button(ng-click="$mdOpenMenu($event)")
+						md-icon more_vert
+					md-menu-content
+						md-menu-item( ng-click="showCarDetails(car)" )
+							md-button Ver
+						md-menu-item( ng-click="selectDefaultAuto(car)" )
+							md-button Predeterminado
+						md-menu-item( ng-click="editCar(car)" )
+							md-button Editar
+						md-menu-item( ng-click="removeCar(car)" )
+							md-button Eliminar
+
+			div.check-selected( ng-class="{ 'selected': car.selectedTimeline}" )
+				md-icon.check check
+			div.image
+			div.car-data
+				span.options-car-card
+				div.plate {{car.plate}}
+				div.brand {{car.brand}}
+				div.model {{car.model}}
+				div.default( ng-if="$first" ) Predeterminado
+
+	div.car-details
+		div.title Linea del tiempo
+		div.car-data
+			div.brand {{carTimeline.brand}}
+			div.model {{carTimeline.model}}
+			div.plate {{carTimeline.plate}}
+
+		ul.timeline
+			li.item( ng-repeat="time in carTimeline.timeline" )
+				span.date {{time.date}}

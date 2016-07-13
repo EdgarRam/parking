@@ -1,0 +1,22 @@
+div.container
+	div.container-profile
+		div.primary-container
+			div.actions
+				div.edit-profile( ng-click="editProfile()" )
+					md-icon mode_edit
+				div.image-profile
+					img.img(src="http://envato.rathemes.com/infinity/assets/images/221.jpg")
+				div.cancel-account( ng-click="cancelAccount()" )
+					md-icon close
+			div.name {{user.full_name}}
+		div.segundary-container
+			ul.data-profile
+				li.item-data.phone
+					div.title Telefono
+					div.text {{user.phone}}
+				li.item-data.email
+					div.title Email
+					div.text {{user.email}}
+				li.item-data.email
+					div.title Carro predeterminado
+					div.text {{user.carDefault}}

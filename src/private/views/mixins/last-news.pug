@@ -1,0 +1,14 @@
+mixin last-news(  _model, _text )
+	- var model = "user in "+ _model
+	section.last-news
+		h1.title= _text
+		md-content.md-padding.content-card( layout-xs="column" layout="column" )
+			div( flex-xs="" flex-gt-xs="50" layout="column" )
+				md-card(ng-repeat = model )
+					md-card-title
+						md-card-title-media
+							div.md-media-sm.card-media(ng-if = "user.img")
+								img( ng-src="{{user.img}}" alt="")
+						md-card-title-text
+							span.md-headline {{user.full_name}}
+							span.md-subhead {{user.date}}

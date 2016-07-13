@@ -1,0 +1,57 @@
+
+md-dialog.add-car(aria-label='List dialog')
+	form(name="formAddCar")
+		md-dialog-content
+			md-toolbar.md-hue-2
+				div.md-toolbar-tools
+					h2
+						span Agregar auto
+			div.content-dialog#scroller-add-car
+				scrollable
+						md-input-container.md-block.select
+							label Marca
+							md-icon directions_car
+							md-select(ng-model='car.brand' name="brand" required="")
+								md-option(value='{{brand.brand}}' ng-repeat="brand in listBrands") {{brand.brand}}
+							div(ng-messages="formAddCar.brand.$error")
+								div(ng-message="required") Campo requerido
+
+						md-input-container.md-block
+							label Modelo
+							md-icon directions_car
+							input( type="text" ng-model="car.model" name="model" required="" )
+							div(ng-messages="formAddCar.model.$error")
+								div(ng-message="required") Campo requerido
+
+						md-input-container.md-block
+							label Color
+							md-icon directions_car
+							input( type="text" ng-model="car.color" name="color" required="" )
+							div(ng-messages="formAddCar.color.$error")
+								div(ng-message="required") Campo requerido
+
+						md-input-container.md-block
+							label Placas
+							md-icon directions_car
+							input( type="text" ng-model="car.plate" name="plate" required="" )
+							div(ng-messages="formAddCar.plate.$error")
+								div(ng-message="required") Campo requerido
+
+						md-input-container.md-block
+							label Año
+							md-icon directions_car
+							input( type="text" ng-model="car.year" name="year" required="" )
+							div(ng-messages="formAddCar.year.$error")
+								div(ng-message="required") Campo requerido
+
+						md-input-container.md-block.select
+							label Tipo
+							md-icon directions_car
+							md-select(ng-model='car.type' name="type" required="")
+								md-option(value='{{type.type}}' ng-repeat="type in listTypes") {{type.type}}
+							div(ng-messages="formAddCar.type.$error")
+								div(ng-message="required") Campo requerido
+
+		md-dialog-actions
+			md-button.md-raised.md-primary(ng-click='accept(formAddCar)') Agregar
+			md-button.md-raised.md-warn(ng-click='cancel()') Cancelar

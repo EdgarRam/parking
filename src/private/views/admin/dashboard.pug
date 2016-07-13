@@ -1,0 +1,32 @@
+include ../mixins/last-news
+
+
+div#admin-dashboard.container.margin30
+	div.row
+
+		div.col-6
+			div.col-2
+				+last-news( 'users', 'Ultimos usuarios registrados' )
+			div.col-2
+				+last-news( 'carUsers', ' Ultimos automoviles registrados' )
+			div.col
+				canvas#base.chart-bar(
+					chart-data="data" chart-labels="labels" chart-colors="colors"
+					chart-dataset-override="datasetOverride" )
+
+
+
+		div.col-3
+			section.last-news.great
+				h1.title Usuarios con estacionamiento este mes
+				md-content.md-padding.content-card( layout-xs="column" layout="column" )
+					div( flex-xs="" flex-gt-xs="50" layout="column" )
+
+						md-card(ng-repeat = "user in usersWithParking")
+							md-card-title
+								md-card-title-media
+									div.md-media-sm.card-media(ng-if = "user.img")
+										img( ng-src="{{user.img}}" alt="")
+								md-card-title-text
+									div.description
+										span.md-headline {{user.full_name}}

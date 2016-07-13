@@ -1,0 +1,38 @@
+doctype html
+html(lang="es", ng-app="webappParkingPrivate")
+	head
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Estacionamiento
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.css")
+		link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,300italic' rel='stylesheet' type='text/css')
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+		link(rel='stylesheet', href='../bower_components/nanoscroller/bin/css/nanoscroller.css')
+		link(rel="stylesheet", href="styles/main.css")
+	body
+		div.container-main
+			include views/includes/menu.pug
+			div.view-container
+				div( ui-view="" )
+			include views/includes/footer.pug
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-animate.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-aria.min.js")
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.5.7/angular-messages.min.js')
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.js")
+		script(src='/bower_components/Chart.js/Chart.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/0.10.2/angular-chart.min.js')
+
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/oclazyload/1.0.9/ocLazyLoad.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js')
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.7/javascripts/jquery.nanoscroller.min.js")
+		script(src="../bower_components/angular-nanoscroller/scrollable.js")
+
+		script(type='text/javascript', src='../commons/scripts/webapp.js')
+
+		//- webapp
+		script( src="scripts/webapp/webapp.js" )
+		script( src="scripts/services/modal-srv.js" )
+		script( src="scripts/webapp/webapp-router-config.js" )

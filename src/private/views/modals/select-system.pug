@@ -1,0 +1,13 @@
+
+md-dialog#select-system(aria-label='List dialog')
+
+	md-dialog-content
+		md-toolbar.md-hue-2
+			div.md-toolbar-tools
+				h2 Seleccionar
+
+		md-list
+			a(ng-repeat ="option in options" ng-click ="redirect(option.url)")
+				md-list-item.md-2-line
+					div.md-list-item-text
+						h3 {{ option.name }}

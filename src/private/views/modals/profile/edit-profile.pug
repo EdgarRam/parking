@@ -1,0 +1,34 @@
+
+md-dialog.add-car(aria-label='List dialog')
+	form(name="formEditUser")
+		md-dialog-content
+			md-toolbar.md-hue-2
+				div.md-toolbar-tools
+					h2
+						span Editar perfil
+			div.content-dialog#scroller-add-car
+				scrollable
+						md-input-container.md-block.select
+							label Nombre completo
+							md-icon directions_car
+							input( type="text" ng-model="user.full_name" name="full_name" required="" )
+							div(ng-messages="formEditUser.full_name.$error")
+								div(ng-message="required") Campo requerido
+
+						md-input-container.md-block
+							label Telefono
+							md-icon directions_car
+							input( type="text" ng-model="user.phone" name="phone" required="" )
+							div(ng-messages="formEditUser.phone.$error")
+								div(ng-message="required") Campo requerido
+
+						md-input-container.md-block
+							label Email
+							md-icon directions_car
+							input( type="text" ng-model="user.email" name="email" required="" )
+							div(ng-messages="formEditUser.email.$error")
+								div(ng-message="required") Campo requerido
+
+		md-dialog-actions
+			md-button.md-raised.md-primary(ng-click='accept(formEditUser)') Guardar cambios
+			md-button.md-raised.md-warn(ng-click='cancel()') Cancelar

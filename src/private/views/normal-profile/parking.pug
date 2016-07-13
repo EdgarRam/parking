@@ -1,0 +1,19 @@
+section.container.margin30.paddingTb15.parking
+    h1 Aprende a estacionarte en 4 sencillos pasos
+    input#carTest( name = "carTest" type= "checkbox" ng-model="modelCar")
+    label(for="carTest")
+    div.station(ng-class = "{'active': modelCar }")
+        div.car.silver
+            div.car-front
+            div.car-middle
+            div.car-back
+
+        div#test.car
+            div.car-front
+            div.car-middle
+            div.car-back
+
+        div.car.red
+            div.car-front
+            div.car-middle
+            div.car-back

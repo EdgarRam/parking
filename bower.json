@@ -1,0 +1,20 @@
+{
+  "name": "parking",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/work-development/Parking",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-material": "^1.0.9",
+    "angular-chart.js": "^0.10.2",
+    "angular-material": "^1.0.9",
+    "angular-nanoscroller": "^0.2.1"
+  }
+}
